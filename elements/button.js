@@ -7,6 +7,26 @@ module.exports = (theme) => {
             color: '#fff',
             backgroundColor: theme('colors.primary.500'),
             transition: 'all .2s ease-in-out',
+            gap: theme('spacing.2'),
+
+            '& > span.icon': {
+                fontSize: theme('spacing.5'),
+            },
+
+            // Default states
+            '&:focus': {
+                outline: 'solid',
+                outlineWidth: theme('spacing.1'),
+                outlineColor: theme('colors.primary.300'),
+            },
+            '&:disabled': {
+                color: 'rgba(255, 255, 255, 0.4)',
+            },
+            '&:active': {
+                outline: 'solid',
+                outlineWidth: theme('spacing.1'),
+                outlineColor: theme('colors.primary.700'),
+            },
 
             // default btn
             '&': {
@@ -56,6 +76,29 @@ module.exports = (theme) => {
                 },
                 '&:disabled': {
                     backgroundColor: 'transparent',
+                    color: theme('colors.primary.200'),
+                    border: 'none',
+                },
+            },
+
+            '&-text': {
+                backgroundColor: 'transparent',
+                color: theme('colors.primary.500'),
+                border: 'none',
+                '&:hover': {
+                    backgroundColor: 'transparent',
+                    color: theme('colors.primary.600'),
+                },
+                '&:active': {
+                    backgroundColor: 'transparent',
+                    outlineWidth: '0px',
+                    color: theme('colors.primary.700'),
+                },
+                '&:focus': {
+                    outlineWidth: '0px',
+                },
+                '&:disabled': {
+                    backgroundColor: 'transparent',
                     color: theme('colors.primary.100'),
                     border: 'none',
                 },
@@ -68,8 +111,9 @@ module.exports = (theme) => {
                 letterSpacing: '0.005em',
                 lineHeight: theme('spacing.5'),
                 borderRadius: `${theme('spacing.1')}`,
-
-
+                '& > span.icon': {
+                    fontSize: theme('spacing[3.5]'),
+                }
             },
 
             '&-md': {
@@ -78,29 +122,21 @@ module.exports = (theme) => {
                 letterSpacing: '0.005em',
                 lineHeight: theme('spacing.5'),
                 borderRadius: `${theme('spacing.1')}`,
-
+                '& > span.icon': {
+                    fontSize: theme('spacing.4'),
+                }
 
             },
             '&-lg': {
                 padding: `${theme('spacing.4')} ${theme('spacing.6')}`,
                 fontSize: theme('fontSize.label-xl'),
                 lineHeight: theme('spacing.7'),
+                '& > span.icon': {
+                    fontSize: theme('spacing.7'),
+                }
             },
 
-            // btn states
-            '&:focus': {
-                outline: 'solid',
-                outlineWidth: theme('spacing.1'),
-                outlineColor: theme('colors.primary.300'),
-            },
-            '&:disabled': {
-                color: 'rgba(255, 255, 255, 0.4)',
-            },
-            '&:active': {
-                outline: 'solid',
-                outlineWidth: theme('spacing.1'),
-                outlineColor: theme('colors.primary.700'),
-            }
+
         }
     }
 }
