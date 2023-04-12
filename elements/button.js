@@ -270,6 +270,67 @@ module.exports = (theme) => {
                     },
                 },
             },
-        }
+        },
+        '.fab': {
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            color: '#fff',
+            backgroundColor: theme('colors.primary.500'),
+            transition: 'all .2s ease-in-out',
+            // padding: `${theme('spacing.2')} ${theme('spacing.3
+
+            '&-sm': {
+                width: theme('spacing.8'),
+                height: theme('spacing.8'),
+                borderRadius: theme('spacing.1'),
+                '& > svg': {
+                    fontSize: theme('spacing.3'),
+                    width: theme('spacing.5'),
+                    height: theme('spacing.5'),
+                    color: '#fff'
+                }
+            },
+
+            '&-md': {
+                width: theme('spacing.10'),
+                height: theme('spacing.10'),
+                borderRadius: theme('spacing.1'),
+                '& > svg': {
+                    fontSize: theme('spacing.4'),
+                    width: theme('spacing.6'),
+                    height: theme('spacing.6'),
+                    color: '#fff'
+                }
+            },
+
+            '&-lg': {
+                width: theme('spacing.12'),
+                height: theme('spacing.12'),
+                borderRadius: theme('spacing.2'),
+                '& > svg': {
+                    fontSize: theme('spacing.5'),
+                    width: theme('spacing.7'),
+                    height: theme('spacing.7'),
+                    color: '#fff'
+                }
+            },
+
+            '&-xl': {
+                width: theme('spacing.14'),
+                height: theme('spacing.14'),
+                borderRadius: theme('spacing.2'),
+                '& > svg': {
+                    fontSize: theme('spacing.6'),
+                    width: theme('spacing.8'),
+                    height: theme('spacing.8'),
+                    color: '#fff'
+                }
+            },
+
+            '&-rounded': {
+                borderRadius: '100%',
+            },
+        },
     }
 }
