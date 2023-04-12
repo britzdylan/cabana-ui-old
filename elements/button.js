@@ -137,6 +137,139 @@ module.exports = (theme) => {
             },
 
 
+            // brands
+            '&-facebook': {
+                color: '#fff',
+                backgroundColor: '#1877F2',
+                '&:hover': {
+                    backgroundColor: '#1B66C8',
+                    outlineWidth: '0px',
+                },
+                '&:active': {
+                    // backgroundColor: theme('colors.brand.facebook'),
+                    outlineWidth: '0px',
+                },
+                '&:focus': {
+                    outlineWidth: '3px',
+                    outlineColor: '#88B9F9',
+                },
+                '&-alt': {
+                    color: theme('colors.neutral.800'),
+                    backgroundColor: '#fff',
+                    border: `solid ${theme('spacing[0.5]')} ${theme('colors.gray.300')}`,
+                    '&:hover': {
+                        backgroundColor: theme('colors.gray.50'),
+                        outlineWidth: '0px',
+                    },
+                    '&:active': {
+                        backgroundColor: theme('colors.gray.50'),
+                        outlineWidth: '0px',
+                    },
+                    '&:focus': {
+                        outlineWidth: '0px',
+                    },
+                },
+            },
+
+            '&-twitter': {
+                color: '#fff',
+                backgroundColor: '#1DA1F2',
+                '&:hover': {
+                    backgroundColor: '#108DDA',
+                    outlineWidth: '0px',
+                },
+                '&:active': {
+                    // backgroundColor: theme('colors.brand.facebook'),
+                    outlineWidth: '0px',
+                },
+                '&:focus': {
+                    backgroundColor: '#108DDA',
+                    outlineWidth: '3px',
+                    outlineColor: '#8CD2FD',
+                },
+                '&-alt': {
+                    color: theme('colors.neutral.800'),
+                    backgroundColor: '#fff',
+                    border: `solid ${theme('spacing[0.5]')} ${theme('colors.gray.300')}`,
+                    '&:hover': {
+                        backgroundColor: theme('colors.gray.50'),
+                        outlineWidth: '0px',
+                    },
+                    '&:active': {
+                        backgroundColor: theme('colors.gray.50'),
+                        outlineWidth: '0px',
+                    },
+                    '&:focus': {
+                        outlineWidth: '0px',
+                    },
+                },
+            },
+
+            '&-google': {
+                color: theme('colors.neutral.800'),
+                backgroundColor: '#fff',
+                border: `solid ${theme('spacing[0.5]')} ${theme('colors.gray.300')}`,
+                '&:hover': {
+                    backgroundColor: theme('colors.gray.50'),
+                    outlineWidth: '0px',
+                },
+                '&:active': {
+                    backgroundColor: theme('colors.gray.50'),
+                    outlineWidth: '0px',
+                },
+                '&:focus': {
+                    outlineWidth: '0px',
+                    border: `solid ${theme('spacing[0.5]')} ${theme('colors.gray.200')}`,
+                },
+                '&-alt': {
+                    color: theme('colors.neutral.800'),
+                    backgroundColor: '#fff',
+                    border: `solid ${theme('spacing[0.5]')} ${theme('colors.gray.300')}`,
+                    '&:hover': {
+                        backgroundColor: theme('colors.gray.50'),
+                        outlineWidth: '0px',
+                    },
+                    '&:active': {
+                        backgroundColor: theme('colors.gray.50'),
+                        outlineWidth: '0px',
+                    },
+                    '&:focus': {
+                        outlineWidth: '0px',
+                    },
+                },
+            },
+
+            '&-apple': {
+                color: '#fff',
+                backgroundColor: '#000',
+                '&:hover': {
+                    backgroundColor: theme('colors.neutral.800'),
+                    outlineWidth: '0px',
+                },
+                '&:active': {
+                    outlineWidth: '0px',
+                },
+                '&:focus': {
+                    outlineWidth: '3px',
+                    outlineColor: theme('colors.gray.300'),
+                },
+                '&-alt': {
+                    color: theme('colors.neutral.800'),
+                    backgroundColor: '#fff',
+                    border: `solid ${theme('spacing[0.5]')} ${theme('colors.gray.300')}`,
+                    '&:hover': {
+                        backgroundColor: theme('colors.gray.50'),
+                        outlineWidth: '0px',
+                    },
+                    '&:active': {
+                        backgroundColor: theme('colors.gray.50'),
+                        outlineWidth: '0px',
+                    },
+                    '&:focus': {
+                        outlineWidth: '0px',
+                    },
+                },
+            },
         }
     }
 }
