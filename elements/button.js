@@ -157,6 +157,9 @@ module.exports = (theme) => {
                     color: theme('colors.neutral.800'),
                     backgroundColor: '#fff',
                     border: `solid ${theme('spacing[0.5]')} ${theme('colors.gray.300')}`,
+                    '& > span.icon': {
+                        color: '#1877F2',
+                    },
                     '&:hover': {
                         backgroundColor: theme('colors.gray.50'),
                         outlineWidth: '0px',
@@ -191,6 +194,9 @@ module.exports = (theme) => {
                     color: theme('colors.neutral.800'),
                     backgroundColor: '#fff',
                     border: `solid ${theme('spacing[0.5]')} ${theme('colors.gray.300')}`,
+                    '& > span.icon': {
+                        color: '#1DA1F2',
+                    },
                     '&:hover': {
                         backgroundColor: theme('colors.gray.50'),
                         outlineWidth: '0px',
@@ -225,6 +231,9 @@ module.exports = (theme) => {
                     color: theme('colors.neutral.800'),
                     backgroundColor: '#fff',
                     border: `solid ${theme('spacing[0.5]')} ${theme('colors.gray.300')}`,
+                    '& > span.icon': {
+                        color: 'currentColor',
+                    },
                     '&:hover': {
                         backgroundColor: theme('colors.gray.50'),
                         outlineWidth: '0px',
