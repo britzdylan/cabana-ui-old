@@ -25,6 +25,11 @@ module.exports = (theme) => {
             outlineWidth: theme('spacing.1'),
             outlineColor: theme('colors.primary.300'),
         },
+        '&:focus-visible': {
+            outline: 'solid',
+            outlineWidth: theme('spacing.1'),
+            outlineColor: theme('colors.primary.300'),
+        },
         '&:disabled': {
             color: 'rgba(255, 255, 255, 0.4)',
         },
@@ -54,6 +59,7 @@ module.exports = (theme) => {
     }
 
     const outlineBtn = {
+        padding: '0.65rem ' + `${theme('spacing.4')}`,
         backgroundColor: 'transparent',
         border: `solid ${theme('spacing[0.5]')} ${theme('colors.primary.500')}`,
         color: theme('colors.primary.500'),
