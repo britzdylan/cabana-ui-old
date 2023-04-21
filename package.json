@@ -1,6 +1,6 @@
 {
   "name": "cabana-ui",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Cabana plugin for tailwindcss",
   "main": "index.js",
   "scripts": {
