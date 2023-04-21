@@ -15,7 +15,7 @@ module.exports = (theme) => {
     alignItems: 'center',
     justifyContent: 'center',
     gap: theme('spacing.2'),
-    padding: `${theme('spacing.1')} ${theme('spacing.2')}`,
+    padding: `${theme('spacing[1.5]')} ${theme('spacing.3')}`,
     cursor: 'pointer',
     position: 'relative',
     fontSize: theme('fontSize.label'),
@@ -59,8 +59,9 @@ module.exports = (theme) => {
           ...icon,
         },
         '& a': {
-          textDecoration: 'none',
           ...listItem,
+          padding: 0,
+          textDecoration: 'none',
           '& .icon, svg': {
             ...icon,
           },
@@ -86,7 +87,7 @@ module.exports = (theme) => {
         '&-rounded': {
           '& li': {
             borderRadius: '9999px',
-            padding: `${theme('spacing.1')} ${theme('spacing.2')}`,
+            padding: `${theme('spacing[1.5]')} ${theme('spacing.3')}`,
           },
           '& li.active': {
             ...containedItem,
