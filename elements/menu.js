@@ -15,7 +15,7 @@ module.exports = (theme) => {
     alignItems: 'center',
     justifyContent: 'center',
     gap: theme('spacing.2'),
-    padding: `${theme('spacing.2')} ${theme('spacing[2.5]')}`,
+    padding: `${theme('spacing.1')} ${theme('spacing.2')}`,
     cursor: 'pointer',
     position: 'relative',
     fontSize: theme('fontSize.label'),
@@ -38,7 +38,7 @@ module.exports = (theme) => {
     color: '#fff',
     fontWeight: theme('fontWeight.semibold'),
     background: '#000',
-  }
+  };
 
   return {
     'ul.menu': {
@@ -78,15 +78,21 @@ module.exports = (theme) => {
 
       '&-contained': {
         '& li.active': {
-           ...containedItem,
+          ...containedItem,
+          '& a': {
+            ...containedItem,
+          },
         },
         '&-rounded': {
           '& li': {
             borderRadius: '9999px',
-            padding: `${theme('spacing.2')} ${theme('spacing.4')}`,
+            padding: `${theme('spacing.1')} ${theme('spacing.2')}`,
           },
           '& li.active': {
             ...containedItem,
+            '& a': {
+              ...containedItem,
+            },
           },
         },
       },
