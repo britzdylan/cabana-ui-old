@@ -1,52 +1,71 @@
 module.exports = (theme) => {
+  const menu = {
+    listStyle: 'none',
+    display: 'flex',
+    gap: theme('spacing.2'),
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    '&-vertical': {
+      flexDirection: 'column',
+    },
+  };
+
+  const listItem = {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: theme('spacing.2'),
+    padding: `${theme('spacing.2')} ${theme('spacing[2.5]')}`,
+    cursor: 'pointer',
+    position: 'relative',
+    fontSize: theme('fontSize.label'),
+    color: theme('colors.gray.600'),
+    borderRadius: theme('spacing.1'),
+  };
+
+  const setColorShade = (color) => {
+    return {
+      color: theme(`colors.gray.${color}`),
+    };
+  };
+
+  const icon = {
+    width: theme('spacing.4'),
+    height: theme('spacing.4'),
+  };
+
+  const containedItem = {
+    color: '#fff',
+    fontWeight: theme('fontWeight.semibold'),
+    background: '#000',
+  }
+
   return {
     'ul.menu': {
-      listStyle: 'none',
-      display: 'flex',
-      gap: theme('spacing.2'),
-      alignItems: 'center',
-      justifyContent: 'flex-start',
-      '&-vertical': {
-        flexDirection: 'column',
-      },
-
+      ...menu,
       '& li': {
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        gap: theme('spacing.2'),
-        padding: `${theme('spacing.2')} ${theme('spacing[2.5]')}`,
-        cursor: 'pointer',
-        position: 'relative',
-        fontSize: theme('fontSize.label'),
-        color: theme('colors.gray.600'),
-        borderRadius: theme('spacing.1'),
+        ...listItem,
         '&:focus': {
-          color: theme('colors.gray.800'),
+          ...setColorShade(800),
         },
         '&focus-visible': {
-          color: theme('colors.gray.800'),
+          ...setColorShade(800),
         },
         '&:disabled': {
-          color: theme('colors.gray.200'),
+          ...setColorShade(200),
           PointerEvents: 'none',
         },
         '& .icon, svg': {
-          width: theme('spacing.4'),
-          height: theme('spacing.4'),
+          ...icon,
         },
         '& a': {
           textDecoration: 'none',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          gap: theme('spacing.1'),
-          cursor: 'pointer',
+          ...listItem,
           '& .icon, svg': {
-            width: theme('spacing.4'),
-            height: theme('spacing.4'),
+            ...icon,
           },
           '&:disabled': {
+            ...setColorShade(200),
             PointerEvents: 'none',
           },
         },
@@ -59,9 +78,7 @@ module.exports = (theme) => {
 
       '&-contained': {
         '& li.active': {
-          color: '#fff',
-          fontWeight: theme('fontWeight.semibold'),
-          background: '#000',
+           ...containedItem,
         },
         '&-rounded': {
           '& li': {
@@ -69,9 +86,7 @@ module.exports = (theme) => {
             padding: `${theme('spacing.2')} ${theme('spacing.4')}`,
           },
           '& li.active': {
-            color: '#fff',
-            fontWeight: theme('fontWeight.semibold'),
-            background: '#000',
+            ...containedItem,
           },
         },
       },
