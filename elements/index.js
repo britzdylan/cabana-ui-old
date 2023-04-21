@@ -3,6 +3,7 @@ const link = require('./link');
 const menu = require('./menu');
 const pill = require('./pill');
 const breadcrumb = require('./breadcrumb');
+const list = require('./list');
 const main = (theme) => {
   return {
     ...btn(theme),
@@ -10,6 +11,7 @@ const main = (theme) => {
     ...menu(theme),
     ...pill(theme),
     ...breadcrumb(theme),
+    ...list(theme),
   };
 };
 module.exports = main;
